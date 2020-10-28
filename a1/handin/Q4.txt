@@ -1,0 +1,4 @@
+I realize that Intel processors were Little Endian, and that my hex numbers are flipped.
+Correct values:
+0x65f67000
+0x6319ddff

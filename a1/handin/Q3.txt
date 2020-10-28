@@ -1,0 +1,3 @@
+Example: 0x11111111
+Generalized: 0x ab cd cd ab
+If the first and second hex values match the seventh and eight hex values, and the third and fourth hex values match the fifth and sixth hex values.

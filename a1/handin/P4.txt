@@ -1,0 +1,36 @@
+EDGE CASES:
+Low Edge
+01 00 00 00
+The big    endian integer value at address 0 is 16777216
+The little endian integer value at address 0 is 1
+00 00 00 01
+The big    endian integer value at address 0 is 1
+The little endian integer value at address 0 is 16777216
+00 00 00 00
+The big    endian integer value at address 0 is 0
+The little endian integer value at address 0 is 0
+FF FF FF FF
+The big    endian integer value at address 0 is -1
+The little endian integer value at address 0 is -1
+
+High edge
+7F FF FF FF
+The big    endian integer value at address 0 is 2147483647
+The little endian integer value at address 0 is -129
+FF FF FF 7F
+The big    endian integer value at address 0 is -129
+The little endian integer value at address 0 is 2147483647
+F0 00 00 00
+The big    endian integer value at address 0 is -268435456
+The little endian integer value at address 0 is 240
+00 00 00 F0
+The big    endian integer value at address 0 is 240
+The little endian integer value at address 0 is -268435456
+
+RANDOM CASES:
+01 02 03 04
+The big    endian integer value at address 0 is 16909060
+The little endian integer value at address 0 is 67305985
+1A 2B 3C 4D
+The big    endian integer value at address 0 is 439041101
+The little endian integer value at address 0 is 1295788826
