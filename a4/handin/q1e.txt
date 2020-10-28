@@ -1,0 +1,1 @@
+The code is crashing because %s indicates that the variable being printed is a string, but id is an int.
