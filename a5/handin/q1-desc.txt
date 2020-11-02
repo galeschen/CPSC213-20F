@@ -1,0 +1,26 @@
+8 reads:
+1. Read i
+2. Read a
+3. Read x in a (a->x)
+4. Read x[i] in a a (a->x[i])
+
+5. Read a->b.y[i]
+
+6. Read inner a (a->b.a)
+7. Read x in inner a (a->b.a->x)
+8. Read a->b.a->x[i]
+(this was an evil question and took way too long. in fact, so was q2. this whole assignment was evil.)
+
+5 writes:
+1. Write a->x[i] to v0.
+2. Write a->b.y[i] to v1.
+3. Write a->b.a->x[i] to v2.
+4. Write a to a->b.a.
+5. Write a->b.a->b.y[i] to v3.
+
+for reference:
+v0 = a->x[i];
+v1 = a->b.y[i];
+v2 = a->b.a->x[i];
+a->b.a = a;
+v3 = a->b.a->b.y[i];
