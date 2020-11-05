@@ -1,0 +1,46 @@
+LAB 3 - SEPT 29, 2020
+
+1a. i-1
+ld $0x1, r0
+ld $i, r1
+st r0, (r1)
+
+1b. a[0] = a[2] + a[3]
+ld $a, r0               # r0 = address of a
+ld 8(r0), r1            # r1 = a[2]
+ld 12(r0), r2           # r2 = a[3]
+add r1, r2              # r2 = a[2] + a[3]
+st r2, (r0)             # a = a[2] + a[3]
+
+1c. i = i + a[0]
+ld $i, r0               # r0 = address of i
+ld $a, r1               # r1 = address of a
+ld (r0), r2             # r2 = i
+ld (r1), r3             # r3 = 
+add r2, r3
+st r3, (r0)
+
+1d. b[i] = a[a[2]]
+ld $i, r0               # r0 = address of i
+ld (r0), r1             # r1 = value of i
+ld $a, r3               # r3 = address of a
+ld 8(r3), r4            # r4 = a[2]
+ld (r3, r4, 4), r5      # r5 = a[a[2]]
+ld $b, r4               # r4 = address of b[0]
+st r5, (r4, r1, 4)      # b[i] = a[a[2]]
+
+1e. b[a[i]] = a[i-1]
+ld $a, r0               # r0 = address of a
+ld $i, r1               # r1 = address of i
+ld (r0, r1, 4), r4      # r4 = a[i]
+dec r1                  # r1 = i-i
+ld (r0, r1, 4), r2      # r2 = a[i-1]
+ld $b, r3               # r3 = address of b[0]
+st r2, (r3, r4, 4)      # b[a[i]] = a[i-1]
+
+1f. a[b[i] + 1] = a[b[i]] + a[b[i]-1]
+four memory access
+i
+b[i]
+a[b[i]-1]
+a[b[i]]
