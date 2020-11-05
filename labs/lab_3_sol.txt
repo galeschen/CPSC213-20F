@@ -1,4 +1,4 @@
-LAB 3 - SEPT 29, 2020
+LAB 3 - SEPT 28, 2020
 
 1a. i-1
 ld $0x1, r0

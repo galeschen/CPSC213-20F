@@ -1,4 +1,4 @@
-LAB 4 - OCT 5, 2020
+LAB 4 - OCTOBER 6, 2020
 1. b.k = a-> z[2].k
 ld $a, r0           # r0 = address of a
 ld (r0), r0         # r0 = a
