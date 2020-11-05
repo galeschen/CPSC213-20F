@@ -1,8 +1,0 @@
-LAB 4 - OCT 5, 2020
-1. b.k = a-> z[2].k
-ld $a, r0           # r0 = address of a
-ld (r0), r0         # r0 = a
-ld 16(r0), r0       # r0 = a->z[0]
-ld 68(r0), r0
-ld $b, r1
-st r0, 20(r1)
