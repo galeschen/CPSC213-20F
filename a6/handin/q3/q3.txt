@@ -1,0 +1,4 @@
+The problem is in element_delete in element.c. 
+element_delete calls free(e), but e is also being used in list and tree. 
+Freeing e when there might be something pointing to it in list and tree is causing a dangling pointer.
+
